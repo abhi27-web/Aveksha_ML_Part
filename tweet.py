@@ -116,7 +116,7 @@ def scraptweets(search_words,numTweets,latitude,longitude):
 def get_tweets(user1,user2):
     # data = pd.read_csv('Data.csv')
     # data.drop(data.columns[[3,4,5]], axis = 1, inplace = True) 
-    search_words = "women"
+    search_words = ["women","rape","abuse"]
     # data['City'] = data['City'].apply(lambda x: x.lower())
     latitude= user1
     longitude = user2
