@@ -68,7 +68,13 @@ def clean(db_tweets):
     wc = WordCloud(width = 800, height = 500, max_font_size = 110, max_words=100, stopwords=new_stopwords).generate(allWords)
     ax = df['Analysis'].value_counts().plot(kind = 'bar')
     fig = ax.get_figure()
-    fig.savefig('/static/newplot2.png')
+    fig.savefig('C:/Users/abhig/Downloads/DSCWOW/DSCWOW_Aveksha-main/DSCWOW_Aveksha/static/newplot2.png')
+    fig.show()
+    # plt.title('Sentiment Analysis')
+    # plt.xlabel('Sentiment')
+    # plt.ylabel('Counts')        
+    # df['Analysis'].value_counts().plot(kind = 'bar')  
+    # plt.show()
     return nusers,wc,df
 
 def scraptweets(search_words,numTweets,latitude,longitude):
