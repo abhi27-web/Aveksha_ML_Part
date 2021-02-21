@@ -2,7 +2,6 @@ numpy
 pandas
 textblob
 wordcloud
-re
 nltk
 matplotlib.pyplot
 nltk.stem
