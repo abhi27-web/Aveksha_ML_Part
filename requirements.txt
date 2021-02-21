@@ -1,5 +1,12 @@
 numpy
 pandas
+textblob
+wordcloud
+re
+nltk
+matplotlib.pyplot
+nltk.stem
+nltk.corpus
 matplotlib
 appdirs==1.4.4
 certifi==2020.12.5
