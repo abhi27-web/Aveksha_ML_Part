@@ -18,7 +18,7 @@ def requestResults(user1,user2):
 @app.route('/', methods=['POST', 'GET'])
 def get_data():
     print(os.getcwd())
-    if request.method == 'POST':        
+    if request.method == 'POST':      
         user1 = float(request.form['city1'])
         user2 = float(request.form['city2'])
         nusers,wc,df = requestResults(user1,user2)
@@ -27,13 +27,14 @@ def get_data():
         plt.imshow(wc, interpolation="bilinear")
         plt.axis('off')
         plt.plot()   
-        plt.savefig('/static/newplot1.png')
-        plt.title('Sentiment Analysis')
-        plt.xlabel('Sentiment')
-        plt.ylabel('Counts')        
-        df['Analysis'].value_counts().plot(kind = 'bar')  
-        plt.savefig('/static/newplot2.png')
-        return render_template("Twitter_Today.html", column_names=nusers.columns.values, row_data=list(nusers.values.tolist()), zip=zip, url1 ='/static/newplot1.png', url2 ='/static/newplot2.png')
+        plt.savefig('C:/Users/abhig/Downloads/DSCWOW/DSCWOW_Aveksha-main/DSCWOW_Aveksha/static/newplot1.png')
+        # plt.title('Sentiment Analysis')
+        # plt.xlabel('Sentiment')
+        # plt.ylabel('Counts')        
+        # df['Analysis'].value_counts().plot(kind = 'bar')  
+        # # plt.show()
+        # plt.savefig('C:/Users/abhig/Downloads/DSCWOW/DSCWOW_Aveksha-main/DSCWOW_Aveksha/static/newplot2.png')
+        return render_template("Twitter_Today.html", column_names=nusers.columns.values, row_data=list(nusers.values.tolist()), zip=zip, url1 ='../static/newplot1.png', url2 ='../static/newplot2.png')
     return render_template("Twitter_Today.html")
 
 if __name__ == '__main__':
