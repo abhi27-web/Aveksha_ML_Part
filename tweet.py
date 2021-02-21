@@ -66,7 +66,7 @@ def clean(db_tweets):
     allWords = ' '.join([twts for twts in df['text']])
     new_stopwords=["woman","women","girl","women'","https"]
     wc = WordCloud(width = 800, height = 500, max_font_size = 110, max_words=100, stopwords=new_stopwords).generate(allWords)
-    ax = df['Analysis'].value_counts().plot(kind = 'bar')
+    ax = df['Analysis'].value_counts().plot(kind = 'pie')
     fig = ax.get_figure()
     fig.savefig('./static/newplot2.png')
     fig.show()
