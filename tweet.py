@@ -68,6 +68,7 @@ def clean(db_tweets):
     wc = WordCloud(width = 800, height = 500, max_font_size = 110, max_words=100, stopwords=new_stopwords).generate(allWords)
     ax = df['Analysis'].value_counts().plot(kind = 'pie')
     fig = ax.get_figure()
+    os.remove("./static/newplot2.png")
     fig.savefig('./static/newplot2.png')
     fig.show()
     # plt.title('Sentiment Analysis')
